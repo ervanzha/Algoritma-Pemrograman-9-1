@@ -1,0 +1,28 @@
+@author: ervan
+"""
+
+a = str(input('masukan nama = '))
+b = str(input('masukan umur = '))
+c = str(input('masukan alamat = '))
+d = str(input('masukan email = '))
+e = str(input('masukan nama dosen walimu = '))
+
+bio = str(f'''
+Nama = {a}
+Umur = {b}
+Alamat = {c}
+Email = {d}
+Dosen Wali = {e}''')
+
+file = open('File_biodata.txt','w')
+file.write(str(bio))
+file.close()
+print('\nHasil Isi Data kamu\n')
+filereaders = open('File_biodata.txt','r')
+x = filereaders.readlines()
+print(x[1])
+print(x[2])
+print(x[3])
+print(x[4])
+print(x[5])
+filereaders.close()
